@@ -5,6 +5,7 @@ from torch import nn
 from torch.distributions.kl import kl_divergence
 from utils import (context_target_split, batch_context_target_mask,
                    img_mask_to_np_input)
+import time
 
 
 class NeuralProcessTrainer():
@@ -58,6 +59,7 @@ class NeuralProcessTrainer():
         """
         for epoch in range(epochs):
             epoch_loss = 0.
+            # s1 = time.time()
             for i, data in enumerate(data_loader):
                 self.optimizer.zero_grad()
 
@@ -101,6 +103,8 @@ class NeuralProcessTrainer():
                 if self.steps % self.print_freq == 0:
                     print("iteration {}, loss {:.3f}".format(self.steps, loss.item()))
 
+            # e1 = time.time()
+            # print(f'fwd: {e1 - s1:.4f}')
             print("Epoch: {}, Avg_loss: {}".format(epoch, epoch_loss / len(data_loader)))
             self.epoch_loss_history.append(epoch_loss / len(data_loader))
 

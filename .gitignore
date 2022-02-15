@@ -1,0 +1,27 @@
+__pycache__/
+.ipynb_checkpoints/
+exp
+tb
+exp_local
+nbs
+cancel_sweep.py
+check_sweep.py
+# run_*.py
+dmc_benchmarks.py
+
+*.gif
+lightning_logs
+*_logs
+agent_runs
+.idea
+.wandbrc
+*.tar
+d4rl_datasets
+
+.vscode
+
+*.png
+wandb
+
+
+logs

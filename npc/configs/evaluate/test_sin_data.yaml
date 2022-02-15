@@ -1,0 +1,9 @@
+
+dataset: 'sin'
+checkpoints:
+  # prime-silence-12: logs/np/il6ctnps/checkpoints/epoch=914-valid_elbo_epoch=2.715.ckpt
+  # crimson-pond-13: logs/np/2533g9mn/checkpoints/epoch=806-valid_elbo_epoch=-0.202.ckpt
+  attn_latent_linear_det: logs/np/1tmz1q57/checkpoints/epoch=925-valid_elbo_epoch=2.163.ckpt
+  linear_latent_linear_det: logs/np/12845q0d/checkpoints/epoch=977-valid_elbo_epoch=2.075.ckpt
+  attn_latent_attn_det: logs/np/3d0zf4u2/checkpoints/epoch=997-valid_elbo_epoch=1.948.ckpt
+  linear_latent_attn_det: logs/np/13sedw2n/checkpoints/epoch=956-valid_elbo_epoch=1.936.ckpt
