@@ -113,3 +113,49 @@ CUDA_VISIBLE_DEVICES=4 python npc/scripts/train_np.py -wb --max_steps 20000 --bs
 CUDA_VISIBLE_DEVICES=4 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp shift_unseen
 
 
+################## scaling pre-training dataset size
+
+################## scaling the number of random functions
+# D=10
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_500_pts_100
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_250_pts_100
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_100_pts_100
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_50_pts_100
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_25_pts_100
+
+# D=5
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_500_pts_100
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_250_pts_100
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_100_pts_100
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_50_pts_100
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_25_pts_100
+
+# D=2
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_500_pts_100
+CUDA_VISIBLE_DEVICES=5 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_250_pts_100
+CUDA_VISIBLE_DEVICES=5 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_100_pts_100
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_50_pts_100
+CUDA_VISIBLE_DEVICES=5 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_25_pts_100
+
+
+################## scaling the number examples per each function
+# D=10
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_200
+CUDA_VISIBLE_DEVICES=7 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=2 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_50
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 10 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_25
+
+# D=5
+CUDA_VISIBLE_DEVICES=2 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_200
+CUDA_VISIBLE_DEVICES=6 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=3 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_50
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 5 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_25
+
+# D=2
+CUDA_VISIBLE_DEVICES=0 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_200
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_100
+CUDA_VISIBLE_DEVICES=1 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_50
+CUDA_VISIBLE_DEVICES=0 python npc/scripts/train_np.py -wb --max_steps 20000 --bsize 512  --z_dim 16 --r_dim 16 --h_dim 512 --dim 2 --lr 3e-4 --attn_det_path --attn_latent_path --exp fns_5000_pts_25
